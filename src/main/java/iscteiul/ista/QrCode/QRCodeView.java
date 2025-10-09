@@ -1,5 +1,5 @@
 // java
-package iscteiul.ista.todoapp.ui;
+package iscteiul.ista.QrCode;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Image;
@@ -8,7 +8,6 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
-import iscteiul.ista.todoapp.service.QRCodeService;
 
 import java.util.Base64;
 

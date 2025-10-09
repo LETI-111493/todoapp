@@ -1,4 +1,4 @@
-package iscteiul.ista.todoapp.service;
+package iscteiul.ista.QrCode;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
