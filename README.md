@@ -13,21 +13,22 @@ Este projeto automatiza o processo de build e geração do ficheiro JAR usando G
 Exemplo do workflow usado (`build.yml`):
 
 on:
-push:
-branches: [ main ]
+  push:
+    branches: [ main ]
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
-- uses: actions/setup-java@v4
-with:
-java-version: '21'
-- run: mvn clean package
-- uses: actions/upload-artifact@v4
-with:
-name: my-jar
-path: target/*.jar
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+      - run: mvn clean package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-jar
+          path: target/*.jar
+
 
 
 
