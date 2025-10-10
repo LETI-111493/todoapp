@@ -1,4 +1,4 @@
-package iscteiul.ista.base.ui.imprimePDF;
+package iscteiul.ista.base.ui.component;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;

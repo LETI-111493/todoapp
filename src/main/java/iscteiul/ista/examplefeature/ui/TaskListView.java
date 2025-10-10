@@ -1,6 +1,6 @@
 package iscteiul.ista.examplefeature.ui;
 
-import iscteiul.ista.base.ui.imprimePDF.ViewToolbar;
+import iscteiul.ista.base.ui.component.ViewToolbar;
 import iscteiul.ista.examplefeature.Task;
 import iscteiul.ista.examplefeature.TaskService;
 import com.vaadin.flow.component.button.Button;

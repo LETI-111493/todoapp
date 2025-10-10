@@ -46,7 +46,6 @@ public final class MainLayout extends AppLayout {
         // Adiciona item manual para QR Code
         nav.addItem(new SideNavItem("QR Code", "qr", new Icon(VaadinIcon.QRCODE)));
 
-        nav.addItem(new SideNavItem("Task List", "tasks", new Icon(VaadinIcon.LIST)));
         // Adiciona o item "Emails" ao menu
         nav.addItem(new SideNavItem("Emails", "emails", new Icon(VaadinIcon.ENVELOPE_O)));
 

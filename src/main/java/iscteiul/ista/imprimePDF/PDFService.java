@@ -34,4 +34,6 @@ public class PDFService {
         } catch (Exception e) {
             throw new RuntimeException("Erro inesperado ao criar PDF", e);
 
-        }}}
+        }
+    }
+}
