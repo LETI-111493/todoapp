@@ -41,6 +41,7 @@ public final class MainLayout extends AppLayout {
 
         // Itens automáticos do menu
         MenuConfiguration.getMenuEntries().forEach(entry -> nav.addItem(createSideNavItem(entry)));
+        nav.addItem(new SideNavItem("Gerar PDF", "pdf", new Icon(VaadinIcon.FILE_TEXT)));
 
         // Adiciona item manual para QR Code
         nav.addItem(new SideNavItem("QR Code", "qr", new Icon(VaadinIcon.QRCODE)));
