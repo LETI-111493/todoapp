@@ -39,6 +39,9 @@ public final class MainLayout extends AppLayout {
         var nav = new SideNav();
         nav.addClassNames(Margin.Horizontal.MEDIUM);
         MenuConfiguration.getMenuEntries().forEach(entry -> nav.addItem(createSideNavItem(entry)));
+        // Adiciona o item "Emails" ao menu
+        nav.addItem(new SideNavItem("Emails", "emails", new Icon(VaadinIcon.ENVELOPE_O)));
+
         return nav;
     }
 
