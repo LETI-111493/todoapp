@@ -62,6 +62,13 @@ public class Task {
         this.dueDate = dueDate;
     }
 
+    @PrePersist
+    protected void onCreate() {
+        if (creationDate == null) {
+            creationDate = Instant.now();
+        }
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || !getClass().isAssignableFrom(obj.getClass())) {
@@ -83,4 +90,6 @@ public class Task {
         // problem.
         return getClass().hashCode();
     }
+
+
 }
