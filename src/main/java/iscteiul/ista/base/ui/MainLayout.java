@@ -38,9 +38,18 @@ public final class MainLayout extends AppLayout {
     private SideNav createSideNav() {
         var nav = new SideNav();
         nav.addClassNames(Margin.Horizontal.MEDIUM);
+
+        // Itens automáticos do menu
         MenuConfiguration.getMenuEntries().forEach(entry -> nav.addItem(createSideNavItem(entry)));
+
+        // Adiciona item manual para QR Code
+        nav.addItem(new SideNavItem("QR Code", "qr", new Icon(VaadinIcon.QRCODE)));
+
+        nav.addItem(new SideNavItem("Task List", "tasks", new Icon(VaadinIcon.LIST)));
+
         return nav;
     }
+
 
     private SideNavItem createSideNavItem(MenuEntry menuEntry) {
         if (menuEntry.icon() != null) {
