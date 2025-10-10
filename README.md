@@ -3,8 +3,32 @@
 Grupo TP01-2
 
 LETI-111493 Pedro Amaral    
-LETI-70033 Filipe Bernardino
+LETI-70033 Filipe Bernardino 
 LETI-72983 José Mariquito
+
+## Integração contínua com GitHub Actions
+
+Este projeto automatiza o processo de build e geração do ficheiro JAR usando GitHub Actions. O workflow é executado automaticamente a cada push no branch principal e gera o `.jar`.
+
+Exemplo do workflow usado (`build.yml`):
+
+on:
+push:
+branches: [ main ]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-java@v4
+with:
+java-version: '21'
+- run: mvn clean package
+- uses: actions/upload-artifact@v4
+with:
+name: my-jar
+path: target/*.jar
+
 
 
 ## Project Structure
