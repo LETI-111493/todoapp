@@ -39,6 +39,8 @@ public final class MainLayout extends AppLayout {
         var nav = new SideNav();
         nav.addClassNames(Margin.Horizontal.MEDIUM);
         MenuConfiguration.getMenuEntries().forEach(entry -> nav.addItem(createSideNavItem(entry)));
+        nav.addItem(new SideNavItem("Gerar PDF", "pdf", new Icon(VaadinIcon.FILE_TEXT)));
+
         return nav;
     }
 
