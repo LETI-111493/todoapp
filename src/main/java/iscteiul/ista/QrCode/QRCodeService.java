@@ -1,5 +1,9 @@
 package iscteiul.ista.QrCode;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.qrcode.QRCodeWriter;
@@ -15,9 +19,11 @@ import javax.imageio.ImageIO;
 
 @Service
 public class QRCodeService {
+    private static final Logger log = LoggerFactory.getLogger(QRCodeService.class);
 
     public byte[] generateQRCode(String text, int size) {
         try {
+            log.info("Gerando QR Code para o texto: {}", text);
             Map<EncodeHintType, Object> hints = new HashMap<>();
             hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
             QRCodeWriter writer = new QRCodeWriter();

@@ -11,9 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Base64;
 
-@Route("qr")
+import iscteiul.ista.base.ui.MainLayout;
+
+@Route(value = "qr", layout = MainLayout.class)
 @PageTitle("QR Generator")
 public class QRCodeView extends VerticalLayout {
+
 
     private final QRCodeService qrService;
 
@@ -31,14 +34,25 @@ public class QRCodeView extends VerticalLayout {
         gen.addClickListener(e -> {
             String value = text.getValue();
             if (value == null || value.isBlank()) {
+                text.setInvalid(true);
+                text.setErrorMessage("Por favor insira um texto ou URL.");
                 return;
             }
+            text.setInvalid(false);
+
             byte[] png = qrService.generateQRCode(value, 300);
             String base64 = Base64.getEncoder().encodeToString(png);
             String dataUrl = "data:image/png;base64," + base64;
             img.setSrc(dataUrl);
         });
 
+        // Layout
+        setAlignItems(Alignment.CENTER);
+        setJustifyContentMode(JustifyContentMode.CENTER);
+        setPadding(true);
+        setSpacing(true);
+
         add(text, gen, img);
     }
 }
+
