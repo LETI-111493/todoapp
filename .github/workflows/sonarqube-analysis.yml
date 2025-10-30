@@ -23,3 +23,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         with:
           token: ${{ secrets.SONAR_TOKEN }}
+          organization: "LETI-111493"
+          projectKey: "LETI-111493_todoapp"
+          distribution: "sonarcloud"
