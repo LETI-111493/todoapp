@@ -7,6 +7,7 @@ LETI-70033 Filipe Bernardino
 LETI-72983 José Mariquito
 
 DevContainer-70033 -> dentro do IDE remoto não foi possível conectar ao Docker local, aparecendo erro :"Cannot connect to the Docker daemon "
+Devcontainer-72983 -> mesmo problema referido pelo 70033
 
 ## Integração contínua com GitHub Actions
 
