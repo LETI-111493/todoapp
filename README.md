@@ -6,6 +6,8 @@ LETI-111493 Pedro Amaral
 LETI-70033 Filipe Bernardino 
 LETI-72983 José Mariquito
 
+DevContainer-70033 -> dentro do IDE remoto não foi possível conectar ao Docker local, aparecendo erro :"Cannot connect to the Docker daemon "
+
 ## Integração contínua com GitHub Actions
 
 Este projeto automatiza o processo de build e geração do ficheiro JAR usando GitHub Actions. O workflow é executado automaticamente a cada push no branch principal e gera o `.jar`.
